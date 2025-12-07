@@ -573,7 +573,7 @@ export default function Home() {
             >
               <div className="aspect-[4/3] relative">
                 <Image
-                  src="/project3.png"
+                  src="/porto.jpg"
                   alt="JHIC 2025"
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
@@ -757,19 +757,24 @@ export default function Home() {
                   </div>
 
                   {/* Right Column: Image Preview */}
-                  <div className="aspect-video bg-zinc-100 dark:bg-zinc-800 rounded-xl overflow-hidden relative">
-                    {selectedAward.img ? (
-                      <Image
-                        src={selectedAward.img}
-                        alt={selectedAward.name}
-                        fill
-                        className="object-cover"
-                      />
-                    ) : (
-                      <div className="flex h-full w-full items-center justify-center text-zinc-400 dark:text-zinc-600">
-                        <span className="text-sm">No Preview Available</span>
-                      </div>
-                    )}
+                  <div className="flex flex-col gap-2">
+                    <p className="text-sm font-medium text-zinc-900 dark:text-zinc-100">
+                      Website Preview
+                    </p>
+                    <div className="aspect-video bg-zinc-100 dark:bg-zinc-800 rounded-xl overflow-hidden relative">
+                      {selectedAward.img ? (
+                        <Image
+                          src={selectedAward.img}
+                          alt={selectedAward.name}
+                          fill
+                          className="object-cover"
+                        />
+                      ) : (
+                        <div className="flex h-full w-full items-center justify-center text-zinc-400 dark:text-zinc-600">
+                          <span className="text-sm">No Preview Available</span>
+                        </div>
+                      )}
+                    </div>
                   </div>
                 </div>
               </motion.div>
