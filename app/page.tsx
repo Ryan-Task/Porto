@@ -169,18 +169,18 @@ export default function Home() {
         transition={{ duration: 0.6, ease: "easeOut" }}
         className="relative w-full"
       >
-        <div className="relative h-[360px] sm:h-[520px] overflow-hidden">
+        <div className="relative h-[450px] sm:h-[520px] overflow-hidden">
           <video
             autoPlay
             loop
             muted
             playsInline
-            className="absolute inset-0 h-full w-full object-cover scale-[2] sm:scale-100"
+            className="absolute inset-0 h-full w-full object-cover scale-100"
           >
             <source src="/background.mp4" type="video/mp4" />
           </video>
           <div className="absolute inset-0 bg-black/20 dark:bg-black/30" />
-          <div className="relative z-10 mx-auto max-w-7xl h-full px-6 sm:px-8 flex flex-col-reverse justify-center gap-4 sm:flex-row sm:items-center sm:justify-between">
+          <div className="relative z-10 mx-auto max-w-7xl h-full px-6 sm:px-8 flex flex-col-reverse justify-center gap-4 sm:flex-row sm:items-center sm:justify-between pt-32 sm:pt-0">
             <div className="max-w-2xl text-center sm:text-left">
               <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight text-white">
                 Hi, I&apos;m Aryanto Tri Nashrullah
@@ -564,6 +564,7 @@ export default function Home() {
                 setSelectedAward({
                   name: "JHIC 2025",
                   year: "2025",
+                  img: "/project3.png", // Added image for detail view
                   description:
                     "A prestigious national-level competition organized by Jagoan Cloud and Komdigi. Our team competed against over 300 teams to develop an innovative, cloud-based school website. This achievement was highlighted in national media outlets like Radar Jatim and Antara News.",
                 })
@@ -572,7 +573,7 @@ export default function Home() {
             >
               <div className="aspect-[4/3] relative">
                 <Image
-                  src="/porto.jpg"
+                  src="/project3.png"
                   alt="JHIC 2025"
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-105"

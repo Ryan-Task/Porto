@@ -41,11 +41,11 @@ export default function Navbar() {
       transition={{ duration: 0.6, ease: "easeOut" }}
       className="fixed top-6 left-0 right-0 z-50 flex justify-center px-4 pointer-events-none"
     >
-      <nav className="pointer-events-auto flex h-12 items-center gap-1 rounded-full border border-zinc-200/60 bg-white/80 px-2 shadow-lg shadow-zinc-800/5 backdrop-blur-md dark:border-zinc-800/60 dark:bg-zinc-900/80">
+      <nav className="pointer-events-auto flex h-12 items-center gap-1 rounded-full border border-zinc-200/60 bg-white/80 px-2 shadow-lg shadow-zinc-800/5 backdrop-blur-md dark:border-zinc-800/60 dark:bg-zinc-900/80 max-w-[95vw] overflow-x-auto">
         <a
           href="#top"
           onClick={() => handleLinkClick("top")}
-          className={`px-4 py-2 text-sm font-semibold rounded-full transition-colors ${
+          className={`px-3 sm:px-4 py-2 text-xs sm:text-sm font-semibold rounded-full transition-colors shrink-0 ${
             activeSection === "top"
               ? "bg-zinc-100 text-black dark:bg-zinc-800 dark:text-white"
               : "text-black dark:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800"
@@ -54,7 +54,7 @@ export default function Navbar() {
           Ryan
         </a>
 
-        <div className="h-4 w-px bg-zinc-200 dark:bg-zinc-800 mx-1" />
+        <div className="h-4 w-px bg-zinc-200 dark:bg-zinc-800 mx-1 shrink-0" />
 
         {navLinks.map((link) => {
           const sectionId = link.href.substring(1);
@@ -64,7 +64,7 @@ export default function Navbar() {
               key={link.href}
               href={link.href}
               onClick={() => handleLinkClick(sectionId)}
-              className={`px-4 py-2 text-sm font-medium rounded-full transition-colors ${
+              className={`px-2 sm:px-4 py-2 text-xs sm:text-sm font-medium rounded-full transition-colors shrink-0 ${
                 isActive
                   ? "bg-zinc-100 text-black dark:bg-zinc-800 dark:text-white"
                   : "text-zinc-600 hover:text-black hover:bg-zinc-100 dark:text-zinc-400 dark:hover:text-white dark:hover:bg-zinc-800"
@@ -78,7 +78,7 @@ export default function Navbar() {
         <a
           href="#contact"
           onClick={() => handleLinkClick("contact")}
-          className={`ml-1 rounded-full px-5 py-2 text-sm font-medium transition-all hover:scale-105 active:scale-95 ${
+          className={`ml-1 rounded-full px-3 sm:px-5 py-2 text-xs sm:text-sm font-medium transition-all hover:scale-105 active:scale-95 shrink-0 ${
             activeSection === "contact"
               ? "bg-zinc-800 text-white dark:bg-zinc-200 dark:text-black ring-2 ring-zinc-300 dark:ring-zinc-700"
               : "bg-black text-white dark:bg-white dark:text-black"
